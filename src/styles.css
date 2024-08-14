@@ -1,11 +1,11 @@
 @font-face {
   font-family: tickingTimeBomb;
-  src: url(./TickingTimebombBb-RB0l.ttf);
+  src: url(./fonts/TickingTimebombBb-RB0l.ttf);
 }
 
 @font-face {
   font-family: eurostileExtdBlack;
-  src: url(./Eurostile_Extd_Black.otf);
+  src: url(./fonts/Eurostile_Extd_Black.otf);
 }
 
 *, *::before, *::after {
