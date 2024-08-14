@@ -32,7 +32,7 @@ body {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(4, 5rem);
-  grid-template-rows: 2.5rem minmax(6rem, auto) repeat(5, 3rem);
+  grid-template-rows: 2.5rem minmax(8.5rem auto) repeat(5, 3rem);
 }
 
 .logo {
