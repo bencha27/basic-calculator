@@ -148,38 +148,41 @@ function App() {
   const [ { currOperand, prevOperand, operation }, dispatch ] = useReducer(reducer, {});
 
   return (
-    <div className="calculator-bg">
-      <div className="calculator-grid">
-        <div className="logo">CHASIO</div>
-        <div className="output">
-          {prevOperand ? 
-            <div className="prev-operand">{prevOperand} {operation}</div> :
-            <div style={{visibility: "hidden"}} className="prev-operand">0</div>
-          }
-          <div className="curr-operand">{formatOperand(currOperand) || "0"}</div>
+    <div>
+      <div className="calculator-bg">
+        <div className="calculator-grid">
+          <div className="logo">CHASIO</div>
+          <div className="output">
+            {prevOperand ? 
+              <div className="prev-operand">{prevOperand} {operation}</div> :
+              <div style={{visibility: "hidden"}} className="prev-operand">0</div>
+            }
+            <div className="curr-operand">{formatOperand(currOperand) || "0"}</div>
+          </div>
+          <button className="span-two red" 
+            onClick={() => dispatch({ type: ACTIONS.CLEAR })}>CLEAR</button>
+          <button className="red"
+            onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })}>DEL</button>
+          <ButtonOperation operation="÷" dispatch={dispatch} />
+          <ButtonDigit digit="7" dispatch={dispatch} />
+          <ButtonDigit digit="8" dispatch={dispatch} />
+          <ButtonDigit digit="9" dispatch={dispatch} />
+          <ButtonOperation operation="×" dispatch={dispatch} />
+          <ButtonDigit digit="4" dispatch={dispatch} />
+          <ButtonDigit digit="5" dispatch={dispatch} />
+          <ButtonDigit digit="6" dispatch={dispatch} />
+          <ButtonOperation operation="−" dispatch={dispatch} />
+          <ButtonDigit digit="1" dispatch={dispatch} />
+          <ButtonDigit digit="2" dispatch={dispatch} />
+          <ButtonDigit digit="3" dispatch={dispatch} />
+          <ButtonOperation operation="+" dispatch={dispatch} />
+          <ButtonDigit digit="0" dispatch={dispatch} />
+          <ButtonDigit digit="." dispatch={dispatch} />
+          <button className="span-two" 
+            onClick={() => dispatch({ type: ACTIONS.EVALUATE })}>=</button>
         </div>
-        <button className="span-two red" 
-          onClick={() => dispatch({ type: ACTIONS.CLEAR })}>CLEAR</button>
-        <button className="red"
-          onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })}>DEL</button>
-        <ButtonOperation operation="÷" dispatch={dispatch} />
-        <ButtonDigit digit="7" dispatch={dispatch} />
-        <ButtonDigit digit="8" dispatch={dispatch} />
-        <ButtonDigit digit="9" dispatch={dispatch} />
-        <ButtonOperation operation="×" dispatch={dispatch} />
-        <ButtonDigit digit="4" dispatch={dispatch} />
-        <ButtonDigit digit="5" dispatch={dispatch} />
-        <ButtonDigit digit="6" dispatch={dispatch} />
-        <ButtonOperation operation="−" dispatch={dispatch} />
-        <ButtonDigit digit="1" dispatch={dispatch} />
-        <ButtonDigit digit="2" dispatch={dispatch} />
-        <ButtonDigit digit="3" dispatch={dispatch} />
-        <ButtonOperation operation="+" dispatch={dispatch} />
-        <ButtonDigit digit="0" dispatch={dispatch} />
-        <ButtonDigit digit="." dispatch={dispatch} />
-        <button className="span-two" 
-          onClick={() => dispatch({ type: ACTIONS.EVALUATE })}>=</button>
       </div>
+      <a href="https://www.flaticon.com/free-icons/calculator" title="calculator icons">Calculator icons created by Freepik - Flaticon</a>
     </div>
   );
 }
