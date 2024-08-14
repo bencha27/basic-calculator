@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/basic-calculator/static/css/main.6db920c3.css",
+    "main.js": "/basic-calculator/static/js/main.70fa5ca2.js",
+    "static/media/Eurostile_Extd_Black.otf": "/basic-calculator/static/media/Eurostile_Extd_Black.c127467265cb56a7efd4.otf",
+    "static/media/TickingTimebombBb-RB0l.ttf": "/basic-calculator/static/media/TickingTimebombBb-RB0l.73950a4698397f4efb30.ttf",
+    "index.html": "/basic-calculator/index.html",
+    "main.6db920c3.css.map": "/basic-calculator/static/css/main.6db920c3.css.map",
+    "main.70fa5ca2.js.map": "/basic-calculator/static/js/main.70fa5ca2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6db920c3.css",
+    "static/js/main.70fa5ca2.js"
+  ]
+}
