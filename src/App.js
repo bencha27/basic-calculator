@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import { useReducer } from "react";
 import ButtonDigit from "./ButtonDigit";
 import ButtonOperation from "./ButtonOperation";
@@ -107,8 +108,10 @@ function reducer(state, { type, payload }) {
 
 // Evaluate (calculate)
 function evaluate({ currOperand, prevOperand, operation }) {
-  const prev = parseFloat(prevOperand);
-  const curr = parseFloat(currOperand);
+  const prev = parseFloat(unformatOperand(prevOperand));
+  const curr = parseFloat(unformatOperand(currOperand));
+  console.log(prev);
+  console.log(curr);
   if (isNaN(prev) || isNaN(curr)) return "";
 
   let result = "";
@@ -142,6 +145,12 @@ function formatOperand(operand) {
 
   // With decimal
   return `${INTEGER_FORMATTER.format(integer)}.${decimal}`;
+}
+
+// Unformat operand (remove commas)
+function unformatOperand(operand) {
+  if (operand == null) return;
+  return operand.replace(/,/g, "");
 }
 
 function App() {
